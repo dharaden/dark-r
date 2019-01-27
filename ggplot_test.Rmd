@@ -18,7 +18,8 @@ When you click the **Knit** button a document will be generated that includes bo
 ```{r cars}
 summary(cars)
 
-This is new crap
+line changed in andy-branch
+line two changes in andy-branch
 ```
 
 ## Including Plots
