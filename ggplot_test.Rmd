@@ -18,7 +18,8 @@ When you click the **Knit** button a document will be generated that includes bo
 ```{r cars}
 summary(cars)
 
-This is crap andy added and it propbably breaks stuff!
+now this is a whole new line
+a second new line
 ```
 
 ## Including Plots
