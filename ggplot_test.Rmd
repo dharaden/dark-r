@@ -1,6 +1,6 @@
 ---
 title: "ggplot test"
-author: "Dustin Haraden"
+author: "Talia Berson"
 date: "January 25, 2019"
 output: html_document
 ---
