@@ -13,6 +13,7 @@ library(tidyverse)
 library(psych)
 library(rmdrive) #https://github.com/ekothe/rmdrive
 library(dataMaid)
+library(sjPlot)
 
 
 
@@ -71,8 +72,24 @@ stargazer -> https://www.jakeruss.com/cheatsheets/stargazer/
 xtable -> https://www.rdocumentation.org/packages/xtable/versions/1.8-3/topics/xtable
 
 ```{r correlation}
+#Full Correlation
+sjt.corr(dep)
 
-
+#Selected Variables
+  dep %>% 
+    select('sex','grade','hob','dep1':'dep5') %>% 
+    sjt.corr()
+  
+  
+#Pretty Tables
+  dep %>% 
+    select('sex','grade','hob','dep1':'dep5') %>% 
+    sjt.corr(show.p=FALSE,digits=2, triangle='upper', 
+             string.diag = c('1','2','3','4','5','6','7','8'),
+             file = 'Tables/Table1.html')
+  
+  #dplyr::rename_all('Gender','Grade','Hobbies','Depression-1','Depression-2',
+  #         'Depression-3','Depression-4','Depression-5') %>% 
 ```
 
 Table 1 Correlation
